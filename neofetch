@@ -1245,11 +1245,11 @@ get_model() {
         ;;
 
         "Mac OS X"|"macOS")
-            if [[ $(kextstat | grep -F -e "FakeSMC" -e "VirtualSMC") != "" ]]; then
-                model="Hackintosh (SMBIOS: $(sysctl -n hw.model))"
-            else
+            //if [[ $(kextstat | grep -F -e "FakeSMC" -e "VirtualSMC") != "" ]]; then
+            //    model="Hackintosh (SMBIOS: $(sysctl -n hw.model))"
+            //else
                 model=$(sysctl -n hw.model)
-            fi
+            //fi	    
         ;;
 
         "iPhone OS")
